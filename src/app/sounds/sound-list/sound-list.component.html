@@ -1,0 +1,19 @@
+<div class="grid-container">
+  <div class="sound-card" *ngFor="let sound of recentSounds">
+    <div class="card-header">Sound #{{sound.id}}</div>
+    <div class="card-content">
+      <fa-icon [icon]="playIcon" class="fa-4x"></fa-icon>
+    </div>
+    <div class="card-quote">
+      {{sound.quote}}
+    </div>
+    <div class="card-tags">
+      <span>
+        <fa-icon [icon]="tagIcon"></fa-icon>
+        General</span>
+    </div>
+    <div class="card-play-count">
+      Played: {{sound.plays}} time(s)
+    </div>
+  </div>
+</div>
