@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Sound} from "../sounds.models";
+import {Sound} from "../models/sounds.models";
 import {SoundsService} from "../sounds.service";
 import {faPlay, faTag} from "@fortawesome/free-solid-svg-icons";
+import {PlayerService} from "../player/player.service";
 
 @Component({
   selector: 'app-sound-list',
@@ -14,12 +15,17 @@ export class SoundListComponent implements OnInit {
 
   recentSounds: Sound[] = [];
 
-  constructor(private service: SoundsService) { }
+  constructor(private service: SoundsService, private player: PlayerService) { }
 
   ngOnInit(): void {
     this.service.listRecent().subscribe((sounds) => {
       this.recentSounds = sounds;
     });
+  }
+
+  playSound(sound: Sound) {
+    sound.plays++;
+    this.player.playSound(sound.id);
   }
 
 }

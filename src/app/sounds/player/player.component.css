@@ -1,0 +1,36 @@
+.playback-controls {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+
+  height: 65px;
+
+  display: flex;
+
+  background: rgb(82, 37, 51);
+
+  justify-content: space-between;
+}
+
+.button-circle {
+  width: 50px;
+  height: 40px;
+
+  border: 1px solid rgb(0, 120, 240);
+
+  margin: 5px;
+  padding: 5px 0;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  transition: .25s;
+}
+
+.button-circle:hover {
+  background: rgba(50, 160, 255, 0.15);
+}

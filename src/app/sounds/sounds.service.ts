@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {Sound} from "./sounds.models";
+import {Sound} from "./models/sounds.models";
 
 @Injectable({
   providedIn: 'root'

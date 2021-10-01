@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { SoundListComponent } from './sounds/sound-list/sound-list.component';
 import {HttpClientModule} from "@angular/common/http";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { PlayerComponent } from './sounds/player/player.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SoundListComponent
+    SoundListComponent,
+    PlayerComponent
   ],
   imports: [
     BrowserModule,
